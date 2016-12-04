@@ -10,10 +10,21 @@ $(document).ready(function(){
   '"Discipline equals freedom. The more discipline you have, the harder you work, the more effort you put into it, the more freedom you are going to have." - Jocko Willink',
   '"Dont think about it, start doing it." - Anonymous'];
   var rand = quotes[Math.floor( Math.random() * quotes.length )];
-  $('blockquote').text(rand);  
+  $('blockquote').text(rand); 
+  
+ //On Button Click 
   $('#newQuote').click(function(){
     $('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
   });
+  
+ //Listen for Enter Key
+  $('blockquote').keyup(function(event){
+    if(event.keyCode == 13){
+        $('#newQuote').click();
+		$('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
+    }
+});
+  
   $('#tweet').click(function(){
     $('#tweet').attr('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(rand));
   });
