@@ -17,13 +17,12 @@ $(document).ready(function(){
     $('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
   });
   
- //Listen for Enter Key
-  $('blockquote').keyup(function(event){
+   //Listen for Enter Key
+    $('#newQuote').keyup(function(event){
     if(event.keyCode == 13){
-        $('#newQuote').click();
-		$('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
+        $('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
     }
-});
+    });
   
   $('#tweet').click(function(){
     $('#tweet').attr('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(rand));
