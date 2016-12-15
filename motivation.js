@@ -11,22 +11,26 @@ var quotes = ['"A dream doesn\'t become reality through magic; it takes sweat, d
  '"The individual who says it is not possible should move out of the way of those doing it." - Tricia Cunningham', 
  '"Build your own dreams or someone else will hire you to build theirs." - Farrah Gray',
  '"The expert in anything was once a beginner" - Anonymous'];
-  var rand = quotes[Math.floor( Math.random() * quotes.length )];
-  $('blockquote').text(rand); 
+ var rand = '';
+ 
+ function randomQuote() {
+  rand = quotes[Math.floor( Math.random() * quotes.length )];
+  $('blockquote').text(rand);
+ }
   
- //On Button Click 
   $('#newQuote').click(function(){
-    $('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
+    $('blockquote').text(randomQuote());
   });
   
    //Listen for Enter Key
     $('.btn').keyup(function(event){
     if(event.keyCode == 13){
-        $('blockquote').text(quotes[Math.floor( Math.random() * quotes.length )]);
+        $('blockquote').text(randomQuote());
     }
-    });
+  });
   
   $('#tweet').click(function(){
     $('#tweet').attr('href','https://twitter.com/intent/tweet?text='+encodeURIComponent(rand));
   });
+  randomQuote();
 });
