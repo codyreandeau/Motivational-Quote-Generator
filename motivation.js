@@ -9,7 +9,8 @@ var quotes = ['"A dream doesn\'t become reality through magic; it takes sweat, d
  '"Discipline equals freedom. The more discipline you have, the harder you work, the more effort you put into it, the more freedom you\'re going to have." - Jocko Willink', 
  '"Dont think about it, start doing it." - Anonymous', '"You\'ve got to get up every morning with determination, if you\'re going to go to bed with satisfaction." - George Lorimer', 
  '"The individual who says it is not possible should move out of the way of those doing it." - Tricia Cunningham', 
- '"Build your own dreams or someone else will hire you to build theirs." - Farrah Gray'];
+ '"Build your own dreams or someone else will hire you to build theirs." - Farrah Gray',
+ '"The expert in anything was once a beginner" - Anonymous'];
   var rand = quotes[Math.floor( Math.random() * quotes.length )];
   $('blockquote').text(rand); 
   
