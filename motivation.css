@@ -79,6 +79,10 @@ blockquote footer {
   text-decoration:none;
 }
 
+#newQuote:focus {
+  outline: 0;
+}
+
 @media (max-width:430px){
 .footer{
   padding-right:10%;
