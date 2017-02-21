@@ -10,7 +10,8 @@ var quotes = ['"A dream doesn\'t become reality through magic; it takes sweat, d
  '"Dont think about it, start doing it." - Anonymous', '"You\'ve got to get up every morning with determination, if you\'re going to go to bed with satisfaction." - George Lorimer', 
  '"The individual who says it is not possible should move out of the way of those doing it." - Tricia Cunningham', 
  '"Build your own dreams or someone else will hire you to build theirs." - Farrah Gray',
- '"The expert in anything was once a beginner" - Anonymous'];
+ '"The expert in anything was once a beginner" - Anonymous', '"It\'s not the load that breaks you down, it\'s the way you carry it." - Lou Holtz', 
+ '"Life begins at the end of your comfort zone."-Neale Donald Walsch', '"Pain is just weakness leaving the body" - U.S. Marine Corps.'];
   var rand = quotes[Math.floor( Math.random() * quotes.length )];
   $('blockquote').text(rand);  
   
